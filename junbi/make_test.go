@@ -1,13 +1,12 @@
 package junbi
 
 import (
-	"os"
+	"fmt"
 	"testing"
 )
 
-var j Junbi
-
-func TestMkDir(t *testing.T) {
+/*
+func estMkDir(t *testing.T) {
 	j = beforeProcess()
 	j.MkDir()
 
@@ -24,7 +23,7 @@ func TestMkDir(t *testing.T) {
 	afterProcess(j)
 }
 
-func TestMkFile(t *testing.T) {
+func estMkFile(t *testing.T) {
 	j = beforeProcess()
 	j.MkDir()
 	j.MkFile()
@@ -48,7 +47,7 @@ func afterProcess(j Junbi) {
 	}
 }
 
-func TestCreate(t *testing.T) {
+func estCreate(t *testing.T) {
 	cases := []string{
 		"rb",
 		"py",
@@ -66,4 +65,10 @@ func TestCreate(t *testing.T) {
 		}
 		os.Remove(file)
 	}
+}
+*/
+
+func TestNewRubyFormat(t *testing.T) {
+	r := NewRubyFormat("hogehoge")
+	fmt.Println(r.name)
 }
